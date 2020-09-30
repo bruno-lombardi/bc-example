@@ -7,21 +7,22 @@ import { Router } from 'react-router-dom';
 import './config/ReactotronConfig';
 
 import history from './services/history';
+import GlobalStyles from './styles/GlobalStyles';
 import Routes from './routes';
 
 // Precisa vir depois da importação do reactotron
 import { store, persistor } from './store';
 
-
 function App() {
   return (
-        <Provider store={store}>
-          <PersistGate persistor={persistor}>
-            <Router history={history}>
-              <Routes />
-            </Router>
-          </PersistGate>
-        </Provider>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <Router history={history}>
+          <Routes />
+        </Router>
+        <GlobalStyles />
+      </PersistGate>
+    </Provider>
   );
 }
 
