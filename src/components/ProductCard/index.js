@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Container, ProductInfo } from './styles';
-import { formatToCurrency } from '../../utils/currency';
 
 function ProductCard({ id, name, price, category, photo_url }) {
   return (
@@ -12,7 +11,7 @@ function ProductCard({ id, name, price, category, photo_url }) {
       <ProductInfo>
         <h4>{name}</h4>
         <p>{category}</p>
-        <span>{formatToCurrency(price)}</span>
+        <span>{price}</span>
       </ProductInfo>
     </Container>
   );
@@ -26,4 +25,4 @@ ProductCard.propTypes = {
   photo_url: PropTypes.string.isRequired,
 };
 
-export default ProductCard;
+export default React.memo(ProductCard);

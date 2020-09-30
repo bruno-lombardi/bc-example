@@ -4,9 +4,9 @@ import { persistReducer } from 'redux-persist';
 export default (reducers) => {
   const persistedReducer = persistReducer(
     {
-      key: 'bc-exemple',
+      key: 'bc-products',
       storage,
-      whitelist: ['exemple'],
+      whitelist: ['products'],
     },
     reducers
   );

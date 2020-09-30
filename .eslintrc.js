@@ -29,6 +29,7 @@ module.exports = {
     'prefer-const': 'off' ,
     'prettier/prettier': 'error',
     'react/jsx-props-no-spreading': 'off',
+    'no-param-reassign': 'off',
     'react/jsx-filename-extension': [
         'warn',
         { extensions: ['.js', '.jsx'] }

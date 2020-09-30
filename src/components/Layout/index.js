@@ -12,7 +12,12 @@ function Layout({ children }) {
 }
 
 Layout.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.func]).isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.element,
+    PropTypes.func,
+  ]).isRequired,
 };
 
 export default Layout;
